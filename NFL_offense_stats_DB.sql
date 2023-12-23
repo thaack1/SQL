@@ -1,0 +1,70 @@
+CREATE DATABASE  IF NOT EXISTS `football` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `football`;
+-- MySQL dump 10.13  Distrib 8.0.28, for macos11 (x86_64)
+--
+-- Host: localhost    Database: football
+-- ------------------------------------------------------
+-- Server version	8.0.28
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `nfloffense_2022`
+--
+
+DROP TABLE IF EXISTS `nfloffense_2022`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `nfloffense_2022` (
+  `ID` int unsigned NOT NULL AUTO_INCREMENT,
+  `team` varchar(50) NOT NULL,
+  `games` int DEFAULT NULL,
+  `points_scored` int DEFAULT NULL,
+  `total_yards` int DEFAULT NULL,
+  `offensive_plays` int DEFAULT NULL,
+  `turnovers_lost` int DEFAULT NULL,
+  `fumbles_lost` int DEFAULT NULL,
+  `interceptions` int DEFAULT NULL,
+  `passes_completed` int DEFAULT NULL,
+  `passes_attempted` int DEFAULT NULL,
+  `passing_yards` int DEFAULT NULL,
+  `passing_touchdowns` int DEFAULT NULL,
+  `passing_first_downs` int DEFAULT NULL,
+  `rushing_attempts` int DEFAULT NULL,
+  `rushing_yards` int DEFAULT NULL,
+  `rushing_touchdowns` int DEFAULT NULL,
+  `rushing_first_downs` int DEFAULT NULL,
+  `penalties` int DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `nfloffense_2022`
+--
+
+LOCK TABLES `nfloffense_2022` WRITE;
+/*!40000 ALTER TABLE `nfloffense_2022` DISABLE KEYS */;
+INSERT INTO `nfloffense_2022` VALUES (1,'Arizona Cardinals',9,203,3039,623,9,3,6,242,364,1986,12,110,234,1053,7,64,64),(2,'Atlanta Falcons',9,217,2881,525,12,6,6,124,201,1415,10,78,303,1466,11,82,39),(3,'Baltimore Ravens',9,235,3194,551,9,3,6,160,257,1681,16,86,274,1513,9,90,48),(4,'Buffalo Bills',8,220,3331,516,14,6,8,193,305,2337,19,114,195,994,6,58,43),(5,'Carolina Panthers',9,179,2609,494,12,4,8,154,268,1661,9,70,205,948,8,48,50),(6,'Chicago Bears',9,187,2890,546,12,6,6,111,188,1131,10,56,325,1759,10,90,45),(7,'Cincinnati Bengals',9,228,3256,591,10,4,6,237,337,2367,18,122,222,889,10,59,41),(8,'Cleveland Browns',8,200,3086,538,12,6,6,163,256,1769,7,90,266,1317,15,79,51),(9,'Dallas Cowboys',8,183,2577,474,7,2,5,144,237,1525,8,81,225,1052,10,53,55),(10,'Denver Broncos',8,121,2631,509,9,4,5,158,274,1764,6,79,211,867,5,43,70),(11,'Detroit Lions',8,188,3018,503,12,5,7,174,276,1945,14,100,214,1073,9,50,51),(12,'Green Bay Packers',9,154,3108,568,13,6,7,211,326,2022,14,99,224,1086,3,62,56),(13,'Houston Texans',8,133,2324,466,9,1,8,162,259,1509,10,69,188,815,3,49,43),(14,'Indianapolis Colts',9,132,2836,595,17,7,10,235,349,2056,9,114,211,780,3,44,47),(15,'Jacksonville Jaguars',9,199,3307,580,13,7,6,198,309,1986,11,108,259,1321,11,71,54),(16,'Kansas City Chiefs',8,243,3322,536,9,3,6,219,334,2494,21,138,186,828,8,43,47),(17,'Las Vegas Raiders',8,183,2707,480,7,2,5,179,287,1825,11,95,174,882,6,53,50),(18,'Los Angeles Chargers',8,184,2914,552,9,4,5,233,351,2201,13,111,191,713,7,39,46),(19,'Los Angeles Rams',8,131,2288,486,13,5,8,196,287,1741,8,99,171,547,6,30,32),(20,'Miami Dolphins',9,213,3424,541,10,3,7,214,322,2642,18,127,202,782,6,44,58),(21,'Minnesota Vikings',8,193,2721,511,8,2,6,200,307,1905,13,107,188,816,10,48,40),(22,'New England Patriots',9,203,2879,547,17,7,10,181,266,1824,9,87,259,1055,9,59,52),(23,'New Orleans Saints',9,212,3398,572,17,7,10,204,314,2220,15,106,239,1178,9,64,62),(24,'New York Giants',8,163,2565,511,8,5,3,144,223,1273,6,71,263,1292,10,73,54),(25,'New York Jets',9,196,3015,570,13,5,8,189,324,1971,10,101,225,1044,10,48,55),(26,'Philadelphia Eagles',8,225,3128,539,3,1,2,164,241,1938,12,97,276,1190,16,76,43),(27,'Pittsburgh Steelers',8,120,2392,506,14,4,10,192,295,1633,6,93,190,759,4,44,51),(28,'San Francisco 49ers',8,176,2853,480,12,6,6,160,251,1897,12,88,212,956,7,56,51),(29,'Seattle Seahawks',9,241,3238,538,12,7,5,207,284,2034,15,105,233,1204,10,61,66),(30,'Tampa Bay Buccaneers',9,162,2986,595,7,6,1,260,398,2440,10,125,183,546,3,35,51),(31,'Tennessee Titans',8,149,2228,445,9,5,4,107,176,1090,6,59,249,1138,10,53,53),(32,'Washington Commanders',9,159,2911,592,11,2,9,202,324,1939,15,101,239,972,4,56,52);
+/*!40000 ALTER TABLE `nfloffense_2022` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-12-22 19:22:27
