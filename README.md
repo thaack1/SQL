@@ -1,4 +1,4 @@
-# Various MySQL Projects
+# MySQL Projects
 
 Within each zip folder, there are two files.
   One contains statements for creating the database and tables, and inserting records.
